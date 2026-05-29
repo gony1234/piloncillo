@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Inicio del documento HTML, idioma español -->
+
+<head> <!-- Configuración de la página -->
+    <meta charset="UTF-8"> <!-- Permite usar acentos y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace la página adaptable a dispositivos móviles -->
+    <title>A´taj T´inom-Cultura de la caña</title> <!-- Título que aparece en la pestaña del navegador -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body> <!-- Todo el contenido visible -->
+
+    <header> <!-- Encabezado principal -->
+
+    <h1 class="logo">
+        <span class="logo-icon">A</span>
+    
+        At´aj <span> T´ojomT´inom</span>
+    </h1><!-- Título principal; span permite aplicar estilo solo a "Pakab" -->
+        
+    <nav> <!-- Menú de navegación -->
+            <ul> <!-- Lista desordenada -->
+                <li><a href="index.html">Volver al Inicio</a></li> <!-- Enlace para regresar a la página principal -->
+            </ul>
+        </nav>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+<section class="precios">
+
+    <h2>Precios de Cada Producto</h2>
+
+    <p>
+        Descubre nuestros productos derivados de la caña de azúcar,
+        elaborados de manera tradicional.
+    </p>
+
+    <!-- BOTON CARRITO -->
+    <div class="carrito-icono" id="abrir-carrito">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span id="contador-carrito">0</span>
+
+    </div>
+
+    <div class="grid-metodos">
+
+        <!-- PRODUCTO 1 -->
+        <div class="metodo-card">
+
+
+            <h3>Piloncillo</h3>
+
+            <img src="imagenes/pl.jpg" alt="Piloncillo">
+
+            <p class="precio">$20 MXN</p>
+
+            <p>
+                Producto tradicional elaborado artesanalmente.
+                Ideal para bebidas y postres mexicanos.
+            </p>
+
+            <button class="btn-comprar" data-producto="Piloncillo" data-precio="20">
+
+                <i class="fa-solid fa-cart-plus"></i>
+
+                Agregar al carrito
+
+            </button>
+
+        </div>
+
+        <!-- PRODUCTO 2 -->
+        <div class="metodo-card">
+
+
+            <h3>Granulado</h3>
+
+            <img src="imagenes/gr.jpg" alt="Granulado">
+
+            <p class="precio">$30 MXN</p>
+
+            <p>
+                Azúcar natural obtenida del proceso de caña.
+                Perfecta para cocina tradicional.
+            </p>
+
+            <button class="btn-comprar" data-producto="Granulado" data-precio="30">
+
+                <i class="fa-solid fa-cart-plus"></i>
+
+                Agregar al carrito
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     CARRITO
+========================= -->
+
+<div class="carrito" id="carrito">
+
+    <div class="carrito-header">
+
+        <h3>
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            Carrito
+
+        </h3>
+
+        <button id="cerrar-carrito">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+    <!-- PRODUCTOS -->
+    <div id="lista-carrito"></div>
+
+    <!-- FOOTER -->
+    <div class="carrito-footer">
+
+        <h4>
+
+            Total:
+            $<span id="total">0</span> MXN
+
+        </h4>
+
+        <a id="btn-whatsapp" target="_blank" href="#">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Realizar pedido
+
+        </a>
+
+    </div>
+
+</div>
+
+<!-- FONDO OSCURO -->
+<div class="overlay-carrito" id="overlay-carrito"></div>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const nav = document.querySelector("nav");
+
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active");
+            nav.classList.toggle("active");
+        });
+    </script>
+    
+   <script>
+
+    const botonesComprar = document.querySelectorAll(".btn-comprar");
+    const carrito = document.getElementById("carrito");
+    const abrirCarrito = document.getElementById("abrir-carrito");
+    const cerrarCarrito = document.getElementById("cerrar-carrito");
+
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalHTML = document.getElementById("total");
+    const contadorHTML = document.getElementById("contador-carrito");
+    const btnWhatsapp = document.getElementById("btn-whatsapp");
+
+    let productos = [];
+
+    /* =========================
+       ABRIR / CERRAR
+    ========================= */
+
+    abrirCarrito.addEventListener("click", () => {
+        carrito.classList.add("active");
+    });
+
+    cerrarCarrito.addEventListener("click", () => {
+        carrito.classList.remove("active");
+    });
+
+    /* =========================
+       AGREGAR PRODUCTOS
+    ========================= */
+
+    botonesComprar.forEach(boton => {
+
+        boton.addEventListener("click", () => {
+
+            const producto = boton.dataset.producto;
+            const precio = Number(boton.dataset.precio);
+
+            productos.push({
+                producto,
+                precio
+            });
+
+            actualizarCarrito();
+
+        });
+
+    });
+
+    /* =========================
+       ACTUALIZAR CARRITO
+    ========================= */
+
+    function actualizarCarrito() {
+
+        listaCarrito.innerHTML = "";
+
+        let total = 0;
+
+        productos.forEach((item, index) => {
+
+            total += item.precio;
+
+            listaCarrito.innerHTML += `
+
+            <div class="item-carrito">
+
+                <div>
+                    <h4>${item.producto}</h4>
+                    <p>$${item.precio} MXN</p>
+                </div>
+
+                <button class="btn-eliminar"
+                    onclick="eliminarProducto(${index})">
+
+                    ✕
+
+                </button>
+
+            </div>
+
+        `;
+
+        });
+
+        totalHTML.textContent = total;
+        contadorHTML.textContent = productos.length;
+
+        generarWhatsapp(total);
+
+    }
+
+    /* =========================
+       ELIMINAR PRODUCTO
+    ========================= */
+
+    function eliminarProducto(index) {
+
+        productos.splice(index, 1);
+
+        actualizarCarrito();
+
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    function generarWhatsapp(total) {
+
+        let mensaje = "Hola, quiero realizar un pedido:%0A%0A";
+
+        productos.forEach(item => {
+
+            mensaje += `• ${item.producto} - $${item.precio} MXN%0A`;
+
+        });
+
+        mensaje += `%0ATotal: $${total} MXN`;
+
+        btnWhatsapp.href =
+            `https://wa.me/524811258659?text=${mensaje}`;
+
+    }
+
+</script>
+    
+
+    <footer>
+        <p>&copy; 2026 At´aj T´ojom T´inom - Producción Agrícola</p> <!-- Texto con símbolo de copyright -->
+    </footer>
+
+</body>
+
+</html> <!-- Fin del documento -->

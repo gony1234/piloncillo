@@ -1,0 +1,115 @@
+<!DOCTYPE html> <!-- Indica que el documento es HTML5 -->
+<html lang="es"> <!-- Inicio del documento HTML, idioma español -->
+
+<head> <!-- Parte de configuración, no visible -->
+    <meta charset="UTF-8"> <!-- Permite usar acentos y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página adaptable a celulares -->
+    <title>A´taj T´inom-Cultura de la caña</title> <!-- Título que aparece en la pestaña -->
+    
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body> <!-- Todo lo visible de la página -->
+
+    <header> <!-- Encabezado principal -->
+
+    <h1 class="logo">
+        <span class="logo-icon">A</span>
+    
+        At´aj <span> T´ojomT´inom</span>
+    </h1> <!-- Título principal; span permite aplicar estilo solo a "Pakab" -->
+        
+    <nav> <!-- Menú de navegación -->
+            <ul> <!-- Lista desordenada -->
+                <li><a href="index.html">Volver al Inicio</a></li> <!-- Enlace a otra página -->
+            </ul>
+        </nav>
+
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+<div class="historia">
+    <h2>Historia</h2>
+
+    <!-- BLOQUE 1 -->
+    <div class="historia-item">
+
+        <div class="historia-img">
+            <img src="imagenes/caña.jpg" alt="Cultivo de caña">
+        </div>
+
+        <div class="historia-texto">
+            <h3>Origen del Negocio</h3>
+            <p>
+                La producción de caña de azúcar en nuestras comunidades tiene raíces profundas,
+                heredadas de generación en generación. Los conocimientos sobre el cultivo han sido
+                transmitidos por 25 años, formando parte de la identidad cultural.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- BLOQUE 2 -->
+    <div class="historia-item reverse">
+
+        <div class="historia-img">
+            <img src="imagenes/cs.jpg" alt="Trabajo en el campo">
+        </div>
+
+        <div class="historia-texto">
+            <h3>¿Porque se llama asi el Negocio?</h3>
+            <p>
+            At´aj T´ojom T´inom la palabra que esta visualizando tiene una gran importancia,
+            es lo que se denomina como una casa, siguiendo de ahi quiere decir trabajo, y por
+            ultimo el siginicado de piloncillo.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- BLOQUE 3 -->
+    <div class="historia-item">
+
+        <div class="historia-img">
+            <img src="imagenes/csc.jpg" alt="Producción de piloncillo">
+        </div>
+
+        <div class="historia-texto">
+            <h3>¿Porque lo artesanal?</h3>
+            <p>
+               Es lo que mantiene vivo esta tradición de dar los productos en muy buen sabor, combinando con
+               varios productos como el pan,cafe, etc por eso es importante preservarlo y que nunca de deje
+               de hacer.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+        nav.classList.toggle("active");
+    });
+</script>
+
+    <footer>
+        <p>&copy;  2026 At´aj T´ojom T´inom - Producción Agrícola</p> <!-- Texto con símbolo de copyright -->
+    </footer>
+
+</body>
+
+</html>

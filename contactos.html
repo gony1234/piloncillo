@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A´taj T´inom-Cultura de la caña</title>
+    
+
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+<header> <!-- Encabezado principal -->
+
+<h1 class="logo">
+    <span class="logo-icon">A</span>
+
+    At´aj <span> T´ojomT´inom</span>
+</h1> <!-- Título principal; span permite aplicar estilo solo a "Pakab" -->
+   
+<nav> <!-- Menú de navegación -->
+        <ul> <!-- Lista desordenada -->
+            <li><a href="index.html">Volver al Inicio</a></li> <!-- Enlace para regresar a la página principal -->
+        </ul>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</header>
+
+
+
+    <section id="contacto">
+    
+        <h2 class="titulo-contacto">Contáctanos</h2>
+    
+        <div class="contenedor-contacto">
+    
+            <!-- INFORMACIÓN -->
+            <div class="card">
+    
+                <h3>
+                    <i class="fa-solid fa-address-card"></i>
+                    Información
+                </h3>
+    
+                <p>
+                    <i class="fa-solid fa-user"></i>
+                    Productor: Albaro Sanchez Martinez
+                </p>
+    
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Chuche, Tanlajás, S.L.P.
+                </p>
+    
+                <!-- TELEFONO -->
+                <p>
+                    <a href="tel:4811258659">
+                        <i class="fa-solid fa-phone"></i>
+                        4811258659
+                    </a>
+                </p>
+    
+                <!-- CORREO -->
+                <p>
+                    <a href="mailto:alvarosanchezmartinez6388@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        albarosanchezmartinez63883@gmail.com
+                    </a>
+                </p>
+    
+                <!-- REDES -->
+                <div class="redes">
+    
+                    <a href="https://facebook.com/Lemy.Hernandez" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+    
+                    <a href="https://wa.me/524811258659" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+    
+                    <a href="https://instagram.com/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+    
+                </div>
+    
+            </div>
+    
+            <!-- FORMULARIO -->
+            <div class="card">
+    
+                <h3>
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Enviar sugerencia de mejoras
+                </h3>
+    
+                <!-- FORMULARIO FUNCIONAL -->
+                <form action="https://formsubmit.co/productor@gmail.com" method="POST">
+    
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    
+                    <input type="email" name="correo" placeholder="Tu correo" required>
+    
+                    <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+    
+                    <!-- CONFIG -->
+                    <input type="hidden" name="_captcha" value="false">
+    
+                    <button type="submit">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Enviar
+                    </button>
+    
+                </form>
+    
+            </div>
+    
+            <!-- MAPA -->
+            <div class="card">
+    
+                <h3>
+                    <i class="fa-solid fa-map"></i>
+                    Ubicación
+                </h3>
+    
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14975.055471875088!2d-98.939!3d21.673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d5f5d6f9a0f3bb%3A0x8e5e4d9b4e4f8e8a!2sTanlaj%C3%A1s%2C%20San%20Luis%20Potos%C3%AD!5e0!3m2!1ses!2smx!4v1710000000000!5m2!1ses!2smx"
+                    width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+    
+            </div>
+    
+        </div>
+    
+        <!-- SEPARADOR -->
+        <div class="separador-pro"></div>
+    
+        <!-- CREADORES -->
+        <section class="creadores">
+    
+            <h2>Creadores de la Página Web</h2>
+    
+            <div class="grid-creadores">
+    
+                <!-- ANALISTA -->
+                <div class="creador-card">
+    
+                    <img src="imagenes/logo.jpg" alt="Analista">
+    
+                    <h3>Nazario Hernandez Hernandez</h3>
+    
+                    <span class="rol">Analista</span>
+    
+                    <p class="descripcion">
+                        Encargado del análisis del proyecto,
+                        organización de información y estructura
+                        general del sistema web.
+                    </p>
+    
+                    <p>
+                        <a href="tel:524821125506">
+                            <i class="fa-solid fa-phone"></i>
+                            4821125506
+                        </a>
+                    </p>
+    
+                    <div class="redes">
+    
+                        <a href="https://facebook.com/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+    
+                        <a href="https://wa.me/524821125506" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+    
+                        <a href="https://instagram.com/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+    
+                    </div>
+    
+                </div>
+    
+                <!-- DISEÑADOR 1 -->
+                <div class="creador-card">
+    
+                    <img src="imagenes/logo.jpg" alt="Diseñador">
+    
+                    <h3>Eleazar Pablo Obispo</h3>
+    
+                    <span class="rol">Diseñador</span>
+    
+                    <p class="descripcion">
+                        Responsable del diseño visual,
+                        colores, estructura gráfica y
+                        experiencia visual de la página.
+                    </p>
+    
+                    <p>
+                        <a href="tel:5248913105099">
+                            <i class="fa-solid fa-phone"></i>
+                            48913105099
+                        </a>
+                    </p>
+    
+                    <div class="redes">
+    
+                        <a href="https://facebook.com/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+    
+                        <a href="https://wa.me/5248913105099" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+    
+                        <a href="https://instagram.com/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+    
+                    </div>
+    
+                </div>
+    
+                <!-- DISEÑADOR 2 -->
+                <div class="creador-card">
+    
+                    <img src="imagenes/logo.jpg" alt="Diseñador">
+    
+                    <h3>Francisco Roque Mateos</h3>
+    
+                    <span class="rol">Diseñador</span>
+    
+                    <p class="descripcion">
+                        Apoyo en diseño responsivo,
+                        animaciones visuales y adaptación
+                        de contenido multimedia.
+                    </p>
+    
+                    <p>
+                        <a href="tel:524821159789">
+                            <i class="fa-solid fa-phone"></i>
+                            4821159789
+                        </a>
+                    </p>
+    
+                    <div class="redes">
+    
+                        <a href="https://facebook.com/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+    
+                        <a href="https://wa.me/524821159789" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+    
+                        <a href="https://instagram.com/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+    
+                    </div>
+    
+                </div>
+    
+                <!-- PROGRAMADOR -->
+                <div class="creador-card">
+    
+                    <img src="imagenes/logo.jpg" alt="Programador">
+    
+                    <h3>Edmundo Santiago Perez</h3>
+    
+                    <span class="rol">Programador</span>
+    
+                    <p class="descripcion">
+                        Desarrollo del código HTML,
+                        CSS y JavaScript, optimización,
+                        menú responsivo y funcionalidades.
+                    </p>
+    
+                    <p>
+                        <a href="tel:524891132506">
+                            <i class="fa-solid fa-phone"></i>
+                            4891132506
+                        </a>
+                    </p>
+    
+                    <div class="redes">
+    
+                        <a href="https://facebook.com/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+    
+                        <a href="https://wa.me/524891132506" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+    
+                        <a href="https://instagram.com/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </section>
+    
+        <!-- UNIVERSIDAD -->
+        <section class="universidad">
+    
+            <h2>Institución</h2>
+    
+            <div class="uni-box">
+    
+                <img src="imagenes/uni.jpg" alt="Logo Universidad">
+    
+                <p>
+                    Campus Tancanhuitz
+                </p>
+    
+            </div>
+    
+        </section>
+    
+    </section>
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+        nav.classList.toggle("active");
+    });
+</script>
+    
+    <footer>
+        <p>&copy; 2026 At´aj T´ojom T´inom - Producción Agrícola</p>
+    </footer>
+
+</body>
+
+</html>

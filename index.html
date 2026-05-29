@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At´aj T´inom-Cultura de la Caña</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+
+    
+    
+        <h1 class="logo">
+            <span class="logo-icon">A</span>
+            At´aj <span>T´ojom T´inom</span>
+        </h1>
+    
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html" class="btn-nav">Inicio</a></li>
+                <li><a href="historia.html" class="btn-nav">Historia</a></li>
+                <li><a href="metodos.html" class="btn-nav">Metodos</a></li>
+                <li><a href="precios.html" class="btn-nav">Precios</a></li>
+                <li><a href="contactos.html" class="btn-nav">Contactos</a></li>
+            </ul>
+        </nav>
+    
+    
+
+    </header>
+
+    <!-- SECCION DE INICIO -->
+    <section class="hero" id="hero">
+    
+
+        <div class="hero-content">
+
+            <h2>La casa del piloncillo</h2>
+
+            <p>
+                En los campos de nuestra comunidad nace una tradición que ha pasado de generación
+                en generación: el cultivo de la caña de azúcar. Cada planta representa el trabajo,
+                la dedicación y el conocimiento de los productores que mantienen viva esta actividad.
+            </p>
+
+            <p>
+                <strong>At´aj T´ojom T´inom</strong> es un espacio para conocer la cultura, el proceso y la
+                importancia de la producción de caña y piloncillo en nuestras comunidades.
+                Te invitamos a descubrir la historia que existe detrás de cada cosecha.
+            </p>
+
+            <a href="#INTRODUCCION" class="btn-main">Descubrir mas</a>
+
+        </div>
+
+    </section>
+
+    <!-- INTRODUCCION -->
+    <section id="INTRODUCCION" class="container bg-light">
+
+        <h2>Un legado agrícola</h2>
+
+        <p>
+            La producción de caña de azúcar es una de las actividades agrícolas más
+            importantes en muchas regiones rurales. Además de representar una fuente
+            de trabajo, también forma parte de la identidad cultural de las comunidades.
+        </p>
+        <p>
+            Nuestro objetivo es entregar la mejor calidad del piloncillo, cada dia nos enforzamos
+             mas para entregar los mejores productos.
+        </p>
+        <p>
+            Somos orgullosamente hablantes de la lengua tenek, este trabajo lleva de generacion inculcado
+            por nuestros abuelitos.
+        </p>
+
+    </section>
+
+    <!-- TRADICION -->
+    <section id="tradicion" class="container">
+
+        <h2>Tradición</h2>
+
+        <p>
+            El trabajo se lleva con mucho cariño y profesionalismo garantizando que las
+            familias, disfruten de los productos y vean como este trabajo se ha
+            mantenido con el pasar de los tiempos.  
+        </p>
+
+        <p>
+            En comunidades como El Chuche, Tanlajás, San Luis Potosí, la producción
+            de caña no solo es un trabajo, sino una tradición que une a las familias
+            y fortalece la identidad cultural de la región.
+        </p>
+
+        <!-- IMAGENES DE TRADICION -->
+        <div class="galeria">
+            <img src="imagenes/tr.jpg" alt="Cultivo de caña">
+        </div>
+
+    </section>
+
+    <!-- CULTURA Y PROCESO -->
+    <section id="proceso" class="container">
+
+        <h2>Herramientas</h2>
+
+        <div class="timeline">
+
+            <div class="step">
+
+                <span>01</span>
+
+                <h4>Cucharas de metal</h4>
+
+                <p>
+                    Es sumamente importante al momento de la coccion de la caña.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <span>02</span>
+
+                <h4>Los moldes</h4>
+
+                <p>
+                    Ayuda para darle forma al piloncillo y se espera unos 3 minutos para sacarlos.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <span>03</span>
+
+                <h4>Molino Motorizado</h4>
+
+                <p>
+                    Lo mas importante ya que facilita todo el proceso de exprimir la caña.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- IMAGENES DEL PROCESO -->
+        <div class="galeria">
+
+            <img src="imagenes/ch.jpg" alt="Cosecha de caña">
+            <img src="imagenes/ml.jpg" alt="Proceso de producción">
+            <img src="imagenes/mt.jpg" alt="Producción de piloncillo">
+
+        </div>
+
+    </section>
+
+    <!-- SECCION DE INVITACION -->
+    <section class="container bg-light">
+
+        <h2>Explora más</h2>
+
+        <p>
+            Si deseas conocer más sobre la historia de la caña, los métodos de produccion
+            los precios y saber donde puedas contactarnos la importancia de este producto
+            en la economía local, te invitamos a explorar las diferentes apartados de
+            nuestro sitio.
+        </p>
+
+        <p>
+            Cada sección te permitirá comprender mejor el valor cultural y productivo
+            que tiene la caña de azúcar en nuestras comunidades.
+        </p>
+
+    </section>
+    
+<script>
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("nav");
+
+    toggle.addEventListener("click", () => {
+
+        toggle.classList.toggle("active");
+        nav.classList.toggle("active");
+
+    });
+
+</script>
+    <!-- PIE DE PAGINA -->
+    <footer>
+
+        <p>&copy; 2026 At´aj T´ojom T´inom - Producción Agrícola</p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

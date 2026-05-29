@@ -1,0 +1,146 @@
+/* =========================
+   BOTONES
+========================= */
+
+.btn-nav {
+    background: linear-gradient(135deg, var(--accent), var(--dark));
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFECTO BRILLO */
+.btn-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.287), transparent);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.btn-nav:hover::before {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+/* HOVER */
+.btn-nav:hover {
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    color: var(--dark);
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* BOTON PRINCIPAL */
+.btn-main {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 35px;
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   CARDS (MEJORADAS)
+========================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    width: 320px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* BORDE DEGRADADO */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* TITULO */
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* TEXTO */
+.card p {
+    margin: 10px 0;
+    font-size: 15px;
+    color: #444;
+}
+
+/* ICONOS */
+.card i {
+    margin-right: 8px;
+    color: var(--primary);
+    transition: 0.3s;
+}
+
+.card:hover i {
+    transform: scale(1.2);
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* VARIANTES */
+.blue {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.green {
+    background: #e8f5e9;
+    color: var(--primary);
+}
+
